@@ -1,6 +1,6 @@
-# Final Recommendation — Ship / Hold
+# Final Recommendation: Ship / Hold
 
-> Module 6 · Culture — ★ Deliverable 7
+> Module 6 · Culture, ★ Deliverable 7
 >
 > The memo that ties it all together: given the evidence, do you ship, hold, or ship-with-conditions? This is your final pitch.
 
@@ -28,7 +28,7 @@ _What must be true to ship, and what's monitored after?_
 
 ## 4. The pitch
 
-_3–5 sentences you'd say to a VP to get a ship/hold decision. Confident, evidence-led, honest about risk._
+_3 to 5 sentences you'd say to a VP to get a ship/hold decision. Confident, evidence-led, honest about risk._
 
 ## 5. What I learned
 

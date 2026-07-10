@@ -1,9 +1,9 @@
 # Evaluation Strategy Canvas
 
-> Module 1 · Evaluation Strategy — ★ Deliverable 1
+> Module 1 · Evaluation Strategy, ★ Deliverable 1
 >
 > The one-page bet that frames everything else: what you're evaluating, why it matters, and what "good enough to ship" means.
-> This is a living document — fill in what you can now and refine it as the course progresses.
+> This is a living document, fill in what you can now and refine it as the course progresses.
 
 ## 1. The feature under evaluation
 
@@ -13,7 +13,7 @@ _What LLM-powered feature are you evaluating? Describe the input, the output, an
 - **Output:** _What does the feature produce?_
 - **User & job-to-be-done:** _Who relies on it, and for what?_
 
-## 2. Why evals — the cost of being wrong
+## 2. Why evals: the cost of being wrong
 
 _What happens when this feature fails silently? (e.g. wrong answer ships, trust erodes, compliance risk.)_
 
@@ -35,7 +35,7 @@ _For each dimension: human review, code/heuristic check, or LLM-as-judge? Why?_
 |---|---|---|
 | _…_ | _human / code / LLM-judge_ | _…_ |
 
-## 5. "Good enough to ship" — the bar
+## 5. "Good enough to ship": the bar
 
 _What threshold per dimension makes this shippable? What's the non-negotiable floor?_
 

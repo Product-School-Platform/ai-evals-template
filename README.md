@@ -1,6 +1,6 @@
-# AI Evals — Final Project
+# AI Evals: Final Project
 
-> My final project for Product School's **AI Evals** certification. One evaluation system for a real LLM feature — from strategy, through failure discovery and an automated eval suite, to the gates and governance that let it ship safely.
+> My final project for Product School's **AI Evals** certification. One evaluation system for a real LLM feature, from strategy, through failure discovery and an automated eval suite, to the gates and governance that let it ship safely.
 
 This is a **template repo**. Click **Use this template → Create a new repository**, name it `ai-evals` (or `<your-feature>-evals`), and fill in one folder per module as you go. The repo URL is your submission.
 
@@ -11,7 +11,7 @@ This is a **template repo**. Click **Use this template → Create a new reposito
 | # | Deliverable | Module | Status | File |
 |---|---|---|---|---|
 | 1 | **Evaluation Strategy Canvas** | M1 | ☐ | `01-evaluation-strategy/strategy-canvas.md` |
-| 2 | **LangSmith setup** (links + screenshots) | M1 | ☐ | `01-evaluation-strategy/langsmith-screenshots.md` |
+| 2 | **Eval harness setup** (links + screenshots) | M1 | ☐ | `01-evaluation-strategy/eval-harness-proof.md` |
 | 3 | **Failure Taxonomy** | M2 | ☐ | `02-failure-discovery/failure-taxonomy.md` |
 | 4 | **Eval Spec** (suite design) | M3 | ☐ | `03-eval-suites/eval-spec.md` |
 | 5 | **Eval Gates & thresholds** | M4 | ☐ | `04-eval-gates/gates-and-thresholds.md` |
@@ -44,7 +44,7 @@ ai-evals/
 ├── README.md                         ← this dashboard
 ├── 01-evaluation-strategy/           ← Module 1
 │   ├── strategy-canvas.md            from the Strategy Canvas tool   ★ Deliverable 1
-│   └── langsmith-screenshots.md      from the LangSmith lab          ★ Deliverable 2
+│   └── eval-harness-proof.md      from the first eval lab         ★ Deliverable 2
 ├── 02-failure-discovery/             ← Module 2
 │   └── failure-taxonomy.md           failure modes + audit           ★ Deliverable 3
 ├── 03-eval-suites/                   ← Module 3

@@ -1,6 +1,6 @@
 # Eval Gates & Thresholds
 
-> Module 4 · Eval Gates — ★ Deliverable 5
+> Module 4 · Eval Gates, ★ Deliverable 5
 >
 > Where your eval suite plugs into the delivery lifecycle, and the thresholds that decide ship / hold.
 
@@ -14,7 +14,7 @@ _Where in the lifecycle does each gate sit, and what does it block?_
 
 ## 2. Thresholds
 
-_The exact pass bar at each gate. Be specific — these are the numbers a release rides on._
+_The exact pass bar at each gate. Be specific, these are the numbers a release rides on._
 
 | Metric | Gate | Threshold | If it fails… |
 |---|---|---|---|

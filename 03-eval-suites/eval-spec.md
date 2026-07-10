@@ -1,6 +1,6 @@
 # Eval Spec
 
-> Module 3 · Eval Suites — ★ Deliverable 4
+> Module 3 · Eval Suites, ★ Deliverable 4
 >
 > The design of your automated evaluation suite: the datasets, evaluators, and pass criteria that turn your taxonomy into a repeatable test.
 

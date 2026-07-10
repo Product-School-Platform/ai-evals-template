@@ -1,8 +1,8 @@
 # Failure Taxonomy
 
-> Module 2 · Failure Discovery — ★ Deliverable 3
+> Module 2 · Failure Discovery, ★ Deliverable 3
 >
-> The structured catalogue of how your feature actually breaks, built from auditing real outputs — not guesses.
+> The structured catalogue of how your feature actually breaks, built from auditing real outputs, not guesses.
 
 ## 1. Audit method
 
