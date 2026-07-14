@@ -1,8 +1,10 @@
 # First LLM-as-a-Judge Eval — Module 1
 
-> Module 1 · First Eval Lab · ★ Deliverable 2
+> Module 1 · First Eval Lab · repo file `01-evaluation-strategy/eval-harness-proof.md`
 >
-> How you wired your first eval harness — an LLM-as-a-Judge running over a dataset — and beat the cold start by seeding a starter dataset. Capture the **setup and your definition of "good"** here; the full scored run against a curated golden set comes later.
+> This lives in your `ai-evals` repo (the repo is your submission). It's the eval evidence behind the **Eval Results** slide of the final pitch deck you assemble in Module 6.
+>
+> How you wired your first eval harness — an LLM-as-a-Judge running over a dataset — and beat the cold start by seeding a starter dataset. Capture the **setup and your definition of "good"** here; the full scored run against a curated golden set comes later. In Module 1 you *wire* the harness — you won't get a score yet (the dataset is near-empty), and that's expected. The first scored run comes in Module 2.
 
 ## Version A — Concise (system prompt used)
 
@@ -36,9 +38,9 @@ _This rubric is the whole point — the judge only scores against what you decid
 
 > Example: **Good** = faithful to the email, no invented facts, ≤60 words, decision-ready for a CEO. **Bad** = adds claims not in the source, buries the key number, or rambles past 100 words.
 
-## Screenshots — links or repo paths
+## Screenshots — links or repo paths (optional if you followed the live demo)
 
-_Drop image links, or commit images under `01-evaluation-strategy/screenshots/` and reference them._
+_Two screenshots: (1) your eval setup showing the dataset + judge, (2) your starter dataset rows. Paste image links, or commit images under `01-evaluation-strategy/screenshots/` and reference the path._
 
 | What it shows | Screenshot / link |
 |---|---|
