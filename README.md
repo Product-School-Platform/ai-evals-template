@@ -10,15 +10,23 @@ This is a **template repo**. Click **Use this template → Create a new reposito
 
 ## Deliverables at a glance
 
-| # | Deliverable | Module | Status | File |
-|---|---|---|---|---|
-| 1 | **Evaluation Strategy Canvas** | M1 | ☐ | `01-evaluation-strategy/strategy-canvas.md` |
-| 2 | **Eval harness setup** (links + screenshots) | M1 | ☐ | `01-evaluation-strategy/eval-harness-proof.md` |
-| 3 | **Failure Taxonomy** | M2 | ☐ | `02-failure-discovery/failure-taxonomy.md` |
-| 4 | **Eval Spec** (suite design) | M3 | ☐ | `03-eval-suites/eval-spec.md` |
-| 5 | **Eval Gates & thresholds** | M4 | ☐ | `04-eval-gates/gates-and-thresholds.md` |
-| 6 | **Governance at scale** | M5 | ☐ | `05-scale/governance.md` |
-| 7 | **Final recommendation** (ship / hold) | M6 | ☐ | `06-culture/final-recommendation.md` |
+| Module | Artifact | Status | File |
+|---|---|---|---|
+| M1 | **Evaluation Strategy Canvas** | ☐ | `01-evaluation-strategy/strategy-canvas.md` |
+| M1 | **Eval harness proof** (links + screenshots) | ☐ | `01-evaluation-strategy/eval-harness-proof.md` |
+| M2 | **Failure audit log** | ☐ | `02-failure-discovery/audit-log.md` |
+| M2 | **Failure Taxonomy** | ☐ | `02-failure-discovery/failure-taxonomy.md` |
+| M3 | **Runnable eval suite** (results) | ☐ | `03-eval-suites/lab-1-eval-suite.md` |
+| M3 | **Trajectory eval** (scorecard) | ☐ | `03-eval-suites/lab-1b-trajectory.md` |
+| M3 | **Judge calibration** (κ) | ☐ | `03-eval-suites/lab-judge-calibration.md` |
+| M3 | **Eval Spec** (suite design) | ☐ | `03-eval-suites/lab-2-eval-spec.md` |
+| M4 | **Eval gate map + thresholds** | ☐ | `04-eval-gates/lab-1-gate-map.md` |
+| M4 | **CI gate policy** | ☐ | `04-eval-gates/lab-ci-gate-policy.md` |
+| M4 | **Launch strategy** | ☐ | `04-eval-gates/lab-2-launch-strategy.md` |
+| M5 | **Coverage matrix** | ☐ | `05-scale/lab-1-coverage-matrix.md` |
+| M5 | **Eval budget** | ☐ | `05-scale/lab-2-budget-crisis.md` |
+| M6 | **Ship / Hold memo** | ☐ | `06-culture/lab-1-ship-hold-memo.md` |
+| M6 | **Final pitch deck** (generated HTML) | ☐ | `06-culture/lab-2-final-pitch.html` |
 
 ## The feature in one sentence
 
@@ -45,16 +53,24 @@ _What LLM feature are you evaluating, who relies on it, and what is the cost of 
 ai-evals/
 ├── README.md                         ← this dashboard
 ├── 01-evaluation-strategy/           ← Module 1
-│   ├── strategy-canvas.md            from the Strategy Canvas tool   ★ Deliverable 1
-│   └── eval-harness-proof.md      from the first eval lab         ★ Deliverable 2
+│   ├── strategy-canvas.md            from the Strategy Canvas tool
+│   └── eval-harness-proof.md         from the first eval lab
 ├── 02-failure-discovery/             ← Module 2
-│   └── failure-taxonomy.md           failure modes + audit           ★ Deliverable 3
+│   ├── audit-log.md                  scored audit of real outputs
+│   └── failure-taxonomy.md           prioritized failure modes
 ├── 03-eval-suites/                   ← Module 3
-│   └── eval-spec.md                  the automated suite design       ★ Deliverable 4
+│   ├── lab-1-eval-suite.md           runnable suite results
+│   ├── lab-1b-trajectory.md          trajectory scorecard
+│   ├── lab-judge-calibration.md      judge calibration (κ)
+│   └── lab-2-eval-spec.md            the automated suite design
 ├── 04-eval-gates/                    ← Module 4
-│   └── gates-and-thresholds.md       launch gates + thresholds        ★ Deliverable 5
+│   ├── lab-1-gate-map.md             launch gates + thresholds
+│   ├── lab-ci-gate-policy.md         CI gate policy
+│   └── lab-2-launch-strategy.md      staged rollout + rollback
 ├── 05-scale/                         ← Module 5
-│   └── governance.md                 coverage · budget · ownership    ★ Deliverable 6
+│   ├── lab-1-coverage-matrix.md      coverage across product lines
+│   └── lab-2-budget-crisis.md        eval budget + trade-offs
 └── 06-culture/                       ← Module 6
-    └── final-recommendation.md       ship/hold memo + pitch           ★ Deliverable 7
+    ├── lab-1-ship-hold-memo.md       ship/hold recommendation
+    └── lab-2-final-pitch.html        generated pitch deck
 ```

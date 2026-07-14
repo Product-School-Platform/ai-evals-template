@@ -1,6 +1,6 @@
 # Final Recommendation: Ship / Hold
 
-> Module 6 · Culture, ★ Deliverable 7
+> Module 6 · Culture · repo file; becomes the Ship/Hold slide of your final pitch deck
 >
 > The memo that ties it all together: given the evidence, do you ship, hold, or ship-with-conditions? This is your final pitch.
 

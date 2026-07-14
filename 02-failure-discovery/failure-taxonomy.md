@@ -1,6 +1,6 @@
 # Failure Taxonomy
 
-> Module 2 · Failure Discovery, ★ Deliverable 3
+> Module 2 · Failure Discovery · repo file; feeds the Failure Taxonomy slide of your final pitch deck
 >
 > The structured catalogue of how your feature actually breaks, built from auditing real outputs, not guesses.
 

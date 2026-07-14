@@ -1,6 +1,6 @@
 # Governance at Scale
 
-> Module 5 · Scale, ★ Deliverable 6
+> Module 5 · Scale · repo file; the closed-loop and scaling evidence behind your Ship/Hold slide
 >
 > How the eval system survives contact with reality: coverage, cost, ownership, and drift over time.
 

@@ -1,6 +1,6 @@
 # Evaluation Strategy Canvas
 
-> Module 1 · Evaluation Strategy, ★ Deliverable 1
+> Module 1 · Evaluation Strategy · repo file; feeds the Strategy Canvas slide of your final pitch deck
 >
 > The one-page bet that frames everything else: what you're evaluating, why it matters, and what "good enough to ship" means.
 > This is a living document, fill in what you can now and refine it as the course progresses.

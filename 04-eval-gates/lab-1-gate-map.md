@@ -1,6 +1,6 @@
 # Eval Gates & Thresholds
 
-> Module 4 · Eval Gates, ★ Deliverable 5
+> Module 4 · Eval Gates · repo file; feeds the Eval Gates slide of your final pitch deck
 >
 > Where your eval suite plugs into the delivery lifecycle, and the thresholds that decide ship / hold.
 
