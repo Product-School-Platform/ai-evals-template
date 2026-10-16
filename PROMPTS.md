@@ -30,9 +30,9 @@ Two habits that make this work:
 
 ## M1 — Evaluation strategy + first eval
 
-> Walk me through `01-evaluation-strategy/LAB.md`. Help me pick 3 trust metrics tied to my product's user
-> promise, draft two prompt versions, and set up a first LLM-as-a-Judge eval (judge from a *different*
-> model family than the generator). Write `strategy-canvas.md` and `eval-harness-proof.md` as we go.
+> Walk me through `01-evaluation-strategy/LAB.md`. Run Lab 1 with me: compare Version A and Version B
+> with a judge from a *different* model family. Then help me write my user promise, pick 3 trust metrics
+> tied to it, and choose the two trade-offs between them. Write `strategy-canvas.md` as we go.
 
 ## M2 — Failure audit + taxonomy
 
