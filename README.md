@@ -4,7 +4,7 @@
 
 This is a **template repo**. Click **Use this template → Create a new repository**, name it `ai-evals` (or `<your-feature>-evals`), and fill in one folder per module as you go. The repo URL is your submission.
 
-> **Tools & cost.** No eval platform, no signup, no credit card. **Module 1 has no notebook.** Compare Version A and Version B in any chat (ChatGPT, Claude, or Gemini) and record the proof in `01-evaluation-strategy/eval-harness-proof.md`. The only runnable notebook is the **Module 3 Cortex lab**, [`03-eval-suites/cortex-eval/eval_lab.ipynb`](03-eval-suites/cortex-eval/). It scores recorded Cortex traces. It does not compare prompt versions on Ascend IQ. Layers 1 and 2 and the Cohen's κ math run with **no key at all**. Only the Layer 3 judge calls OpenAI (`OPENAI_API_KEY`, default model `gpt-4o-mini`), typically a few cents. If your fork does not have that folder, download it from the content library when you reach Module 3 (links are in the Module 1 pre-read). Prefer a dashboard? LangSmith, Braintrust, or Phoenix are optional. Keep model keys in a gitignored `.env`, never commit them. Copy `env.example.txt` to `.env` (same contents as `.env.example`).
+> **Tools & cost.** No eval platform, no signup, no credit card. **Module 1 has no notebook.** Compare Version A and Version B in any chat (ChatGPT, Claude, or Gemini). Keeping notes in `01-evaluation-strategy/eval-harness-proof.md` is optional. The only runnable notebook is the **Module 3 Cortex lab**, [`03-eval-suites/cortex-eval/eval_lab.ipynb`](03-eval-suites/cortex-eval/). It scores recorded Cortex traces. It does not compare prompt versions on Ascend IQ. Layers 1 and 2 and the Cohen's κ math run with **no key at all**. Only the Layer 3 judge calls OpenAI (`OPENAI_API_KEY`, default model `gpt-4o-mini`), typically a few cents. If your fork does not have that folder, download it from the content library when you reach Module 3 (links are in the Module 1 pre-read). Prefer a dashboard? LangSmith, Braintrust, or Phoenix are optional. Keep model keys in a gitignored `.env`, never commit them. Copy `env.example.txt` to `.env` (same contents as `.env.example`).
 
 ---
 
@@ -13,7 +13,6 @@ This is a **template repo**. Click **Use this template → Create a new reposito
 | Module | Artifact | Status | File |
 |---|---|---|---|
 | M1 | **Evaluation Strategy Canvas** | ☐ | `01-evaluation-strategy/strategy-canvas.md` |
-| M1 | **Eval harness proof** (links + screenshots) | ☐ | `01-evaluation-strategy/eval-harness-proof.md` |
 | M2 | **Failure audit log** | ☐ | `02-failure-discovery/audit-log.md` |
 | M2 | **Failure Taxonomy** | ☐ | `02-failure-discovery/failure-taxonomy.md` |
 | M3 | **Runnable eval suite** (results) | ☐ | `03-eval-suites/lab-1-eval-suite.md` |
@@ -44,7 +43,7 @@ each deliverable file for you to commit.
 
 | Module | Paste this into your assistant | Writes |
 |---|---|---|
-| M1 | `01-evaluation-strategy/LAB.md` | strategy canvas + eval harness proof |
+| M1 | `01-evaluation-strategy/LAB.md` | strategy canvas |
 | M2 | `02-failure-discovery/LAB.md` | audit log + failure taxonomy |
 | M3 | `03-eval-suites/LAB.md` | eval suite + trajectory + spec (+ calibration) |
 | M4 | `04-eval-gates/LAB.md` | gate map + CI policy + launch strategy |
@@ -75,8 +74,8 @@ See [`PROMPTS.md`](PROMPTS.md) for the quick-reference prompts.
 ai-evals/
 ├── README.md                         ← this dashboard
 ├── 01-evaluation-strategy/           ← Module 1
-│   ├── strategy-canvas.md            from the Strategy Canvas tool
-│   └── eval-harness-proof.md         from the first eval lab
+│   ├── strategy-canvas.md            from the Module 1 Lab Guide, Activity 2
+│   └── eval-harness-proof.md         optional notes from Activity 1
 ├── 02-failure-discovery/             ← Module 2
 │   ├── audit-log.md                  scored audit of real outputs
 │   └── failure-taxonomy.md           prioritized failure modes
