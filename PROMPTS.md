@@ -36,9 +36,9 @@ Two habits that make this work:
 
 ## M2 — Failure audit + taxonomy
 
-> Walk me through `02-failure-discovery/LAB.md`. I'll paste the 20 scored rows from LangSmith (matched by
-> query text). Help me apply the refusal human-override rule, tag each confirmed failure, and prioritize a
-> Top 3 by frequency + severity. Write `audit-log.md` and `failure-taxonomy.md`.
+> Walk me through `02-failure-discovery/LAB.md`. In Lab 1, I'll flag two rows, send the judge prompt to a
+> model and paste its reply back, then tell you which calls I disagree with and why. In Lab 2, help me pick
+> my top three failures and set each priority with the matrix. Write `audit-log.md` and `failure-taxonomy.md`.
 
 ## M3 — Eval suites
 
