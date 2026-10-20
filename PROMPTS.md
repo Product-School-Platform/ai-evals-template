@@ -48,9 +48,10 @@ Two habits that make this work:
 
 ## M4, Eval gates
 
-> Walk me through `04-eval-gates/LAB.md`. Help me place each failure on severity × pipeline stage (≥1
-> Hard/Soft/Advisory), set per-dimension floors + max-regression for the PR #218 replay, make the merge
-> call, and write the release criteria. Keep CI policy per-dimension, never one blended number.
+> Walk me through `04-eval-gates/LAB.md`. In Lab 1, help me make a call on each row of Engineering's data
+> log (No gate, Advisory, Soft or Hard, and where it runs), then push back on my calls like a skeptical
+> engineering lead. In Lab 2, help me write release criteria for a Hard, a Soft and an Advisory gate, and a
+> plan for when the Soft gate fails. Write `gate-map.md` and `launch-strategy.md`.
 
 ## M5, Scale
 
