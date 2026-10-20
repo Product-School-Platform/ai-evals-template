@@ -143,4 +143,4 @@ If our Soft gate fails …
 - [ ] Lab 1: `gate-map.md` committed in the shape above, with the learner's own calls.
 - [ ] Lab 2: `launch-strategy.md` committed in the shape above, with the learner's own thresholds and plan.
 
-**Next:** Module 5, Run Evals on Live Traffic and Close the Loop.
+**Next:** Module 5, Run Evals on Live Traffic Across Product Lines.

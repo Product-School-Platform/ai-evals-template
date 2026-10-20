@@ -1,140 +1,185 @@
 <!--
-LAB SPEC — machine-readable. This is the coding-agent version of the Module 5 lab guides + the
-Coverage Matrix and Budget Crisis interactive tools. Same steps, same deliverables, same checkpoints —
-written so a coding harness (Cursor, Claude Code, Codex) OR a chatbot (ChatGPT, Claude, Gemini) can
-walk the learner through both M5 labs. If you are a human, you can read it top to bottom.
+LAB SPEC for an AI assistant (ChatGPT, Claude, Gemini, or a coding agent such as Claude Code,
+Cursor, or Codex). It walks a learner through the two Module 5 labs one step at a time, with
+the same steps as the Module 5 Lab Guide. If you are a human, you can read it top to bottom.
 -->
 
-# M5 Lab — Scale: Coverage Matrix + Budget Crisis (assistant runbook)
+# Module 5 Labs, assistant runbook
 
-**Deliverables:** `05-scale/lab-1-coverage-matrix.md` · `05-scale/lab-2-budget-crisis.md`
-**Builds on:** your M2 failure taxonomy + M1 trust metrics (have them open)
-**Time:** ~25 min · **Required:** the matrix must show **≥2 ❌ gaps**; the budget must respect the **$200K cap** with **max 3 Level-3 slots**
-
----
-
-## AGENT INSTRUCTIONS — read this first
-
-You are helping a learner **complete this lab, not do it for them.** The judgement calls — which gaps to
-accept, where to spend — are theirs. Follow these rules:
-
-1. **Go one step at a time.** Do not jump ahead or fill later sections.
-2. **At every `🚦 DECISION` gate, STOP and ask the learner.** If they mark everything ✅ or spread the
-   budget evenly, push back once: force a real gap and a real trade-off.
-3. **Never invent their reasoning.** Offer 2–3 options + a recommendation; the learner picks and says
-   why. Record *their* words and numbers.
-4. **When a step says `✍️ WRITE`, update the named file** and show the diff.
-5. **At each `✅ CHECKPOINT`, summarise and confirm before continuing.**
-
-> **Works with any assistant.** If your assistant can edit files in your repo, have it **write to the
-> deliverable file and commit**. If it can't (e.g. plain ChatGPT), it **prints the finished markdown
-> block** and you paste it into the file, then commit. Same deliverable either way.
->
-> The interactive **Coverage Matrix Tool** and **Budget Crisis Tool** from the Module 5 resources still
-> work if the learner prefers to click — they produce the same markdown. This runbook reaches the same
-> deliverable by conversation.
-
-This lab uses the **Ascend IQ / Ascend Analytics** scenario carried from earlier modules. Reuse the same
-product and failure modes — don't invent new ones.
+**Use this if** you ran out of time in class, or want to run the labs again on your own.
+**Lab 1** produces `05-scale/coverage-matrix.md`.
+**Lab 2** produces `05-scale/eval-budget.md`.
 
 ---
 
-## Before you start
+## AGENT INSTRUCTIONS, read this first
 
-Confirm (ask, don't assume):
+You are helping a learner complete these labs, not doing them for them. The judgment calls are theirs.
 
-- [ ] Their forked `ai-evals` repo is open in this assistant.
-- [ ] They have their M2 failure modes / taxonomy and M1 trust metrics handy.
-- [ ] `05-scale/lab-1-coverage-matrix.md` and `05-scale/lab-2-budget-crisis.md` exist (create from the
-      template shape if not — don't fill fields yet).
+1. Go one step at a time. Do not jump ahead.
+2. At every 🚦 DECISION, stop and ask the learner. Never pick their marks, gaps or levels for them.
+3. Never invent their reasoning. If they are stuck, ask one question that helps them decide.
+4. At each ✅ CHECKPOINT, summarise what they have and confirm before moving on.
+5. In Lab 1, step 4, play the reviewer yourself: do the marks match what runs today, is the accepted gap really low risk given whether the product is internal or external, is the plan specific (which check, what data, how often), and what is the one question their manager would ask? Then let the learner change or keep each answer.
 
----
-
-## LAB 1 — Coverage Matrix
-
-### Step 1 — Score the coverage row  (~5 min)
-
-For the product, score each risk column **✅ / ⚠️ / ❌**: Hallucination · Bias · Latency · Toxicity ·
-Drift Monitoring.
-
-🚦 **DECISION — force honesty.** An all-green matrix isn't real. Require **at least 2 ❌** and make the
-learner say why each cell is where it is (what's actually evaluated today vs. not).
-
-✍️ **WRITE** → `lab-1-coverage-matrix.md` **Coverage row** (+ the product name).
-
-✅ **CHECKPOINT:** the row has ≥2 ❌ and each rating has a one-line justification.
-
-### Step 2 — Method + ground truth for two covered risks  (~4 min)
-
-Pick two ✅/⚠️ cells. For each: **how you evaluate it** and **what you grade against** (the ground
-truth).
-
-✍️ **WRITE** → `lab-1-coverage-matrix.md` **Method + Ground Truth**.
-
-✅ **CHECKPOINT:** two risks have a concrete method + a named ground-truth source.
-
-### Step 3 — Accept one gap, mitigate another  (~4 min)
-
-🚦 **DECISION — strategic acceptance.** Which ❌ are they *accepting* for now, and why is it acceptable
-right now? Get the **kill criterion / date** that would change the call.
-
-🚦 **DECISION — critical mitigation.** Which ❌ can they **not** accept? Get a concrete mitigation plan
-with a **date/owner** — not "we'll add it later".
-
-✍️ **WRITE** → `lab-1-coverage-matrix.md` **Strategic acceptance** + **Critical mitigation**. Commit.
-
-✅ **CHECKPOINT:** one accepted gap (with kill criterion) + one critical gap (with dated plan).
+Scenario: the learner is a PM at Ascend Analytics. Ascend IQ, a customer-facing AI agent, hasn't launched yet. Four other AI products are already live.
 
 ---
 
-## LAB 2 — Budget Crisis
+## Lab 1 · Map Your Portfolio Coverage (about 25 min)
 
-### Step 4 — Allocate Level 1/2/3 under the cap  (~8 min)
+Ascend IQ is the newest product in Ascend Analytics’ AI portfolio, and it hasn’t launched yet. Four other AI products are already live, and each team set up its own evals. Before the next eval budget is set, the CPO wants one view of which trust metrics each product is checked for. Pick one of the four, mark its coverage from what runs today, then decide which gap to accept for now and which to close first.
 
-Allocate coverage Level (L1/L2/L3) across the five failure modes under a **$200,000/quarter cap** with
-**max 3 items at Level 3**.
+**The five trust metrics (columns)**
+- **Hallucination Rate:** False or made-up claims
+- **Fairness:** Uneven quality across groups
+- **Latency:** Response time
+- **UX Trust:** Tone that undermines confidence
+- **Robustness:** Fails on questions it should handle
 
-Reference L3 costs: Hallucination $85K · Context $70K · Attribution $65K · Bias $55K · Latency $25K.
-L2 ≈ 10% of L3, L1 ≈ 5% of L3.
+**The four products, and what runs on each today**
 
-🚦 **DECISION — the grid.** For each of the 5 failures (with its trust metric + risk rating), pick a
-Level and cost. **Enforce the constraints:** total ≤ $200K and ≤ 3 L3 slots. If the learner blows the
-cap, make them cut — that trade-off *is* the lab.
+**AI Report Summaries** (External): Writes executive summaries of research reports, sent straight to clients.
+What runs today:
+- An LLM judge compares each summary with its source report before every release.
+- Response time is logged, but nobody has set a target.
 
-✍️ **WRITE** → `lab-2-budget-crisis.md` **Portfolio decision grid** + the total L3 spend / slots used.
+**Competitor Signal Tracker** (Internal): Scores news and social posts about competitors for the sales and strategy teams.
+What runs today:
+- A timer alerts if the nightly scoring run takes more than 2 hours.
+- A style check flags summaries written in a casual or alarmist tone before they reach the sales team.
 
-✅ **CHECKPOINT:** the grid respects the cap and the 3-L3 limit, with a running total.
+**AI Voice Agent** (External): Answers basic support and billing calls, and passes harder ones to a person.
+What runs today:
+- An eval gate tests its answers to 300 billing questions before every release.
+- A supervisor listens to 10 random calls a week for tone.
+- A drift monitor alerts when callers start asking about things the agent wasn’t tested on.
 
-### Step 5 — Defend the fallbacks  (~4 min)
+**Automated Data Tagging** (Internal): Labels raw market commentary and filings for the models that use them.
+What runs today:
+- A code-based check confirms every label comes from the approved list, but not that it’s the right label.
+- A data analyst reviews 50 labels by hand each quarter, split by source.
+- A check confirms the same kind of text always gets the same label.
 
-For every non-L3 item, name the **cheaper fallback method** you'll run instead, and — especially if you
-downgraded a P0/P1 — the **story you could defend in a customer incident review**.
+1. **Mark the product’s coverage.** Pick one product, and read what runs on it today. For each trust metric, mark ✅ if a check runs on that risk regularly, ⚠️ if someone spot-checks it by hand or the check only measures part of the risk, and ❌ if nothing checks it.
+2. **Accept one gap.** Pick the ❌ you can live with for now. Say why: the risk is low, or the check costs more than it would save. Then say what would make you change your mind, and when you’ll look again.
+3. **Close the critical gap.** Pick the ❌ that would do the most damage if it failed tomorrow. Say who would notice first, what it would cost, and which check would close it: a drift monitor, a periodic audit or a new eval gate.
+4. **Pressure-test and save.** Copy this prompt into a new chat in any LLM and send it. It already includes your row and answers. Change anything the feedback convinces you on, and note what changed.
+   - Write: What did the feedback change?
+   - Click **Copy markdown**, open `05-scale/coverage-matrix.md` in your repo, click the pencil icon, paste over the file, and commit. Or click **Download .md** and upload it to the same folder.
 
-✍️ **WRITE** → `lab-2-budget-crisis.md` **Fallback methods**. Commit + push both files.
+🚦 DECISION at step 1 (each mark, from what runs today), step 2 (the gap to accept, and what would change their mind) and step 3 (the gap to close first, who notices first, what it costs, and the check that closes it).
 
-✅ **CHECKPOINT:** every non-L3 item has a defensible fallback.
+**If you're working with an assistant instead of the Lab Guide,** have it write the file in exactly this shape, then commit it (or paste it into the file on GitHub):
+
+```markdown
+# Module 5 · Coverage Matrix · [product]
+
+## Coverage Row
+
+| Product | Hallucination Rate | Fairness | Latency | UX Trust | Robustness |
+|---|---|---|---|---|---|
+| … | ✅ Covered / ⚠️ Partial / ❌ Gap | … | … | … | … |
+
+## What Runs Today
+
+- …
+
+## Accepted Gap
+
+**[risk].** We accept this gap because …
+
+We’ll look again: …
+
+## Critical Gap
+
+We’ve flagged [risk] as the most critical gap for [product] because … To close it, we’ll add …
+
+## After the Pressure Test
+
+…
+```
+
+✅ CHECKPOINT: five marks that match what runs today, one accepted gap with what would change the learner's mind, and one critical gap with a plan.
 
 ---
 
-## 💼 In practice
+## Lab 2 · Spend Your Eval Budget (about 20 min)
 
-This is the conversation you have with Finance and your eng lead every quarter: you can't evaluate
-everything to the max, so *where do you spend and what do you consciously not cover?* The coverage matrix
-is how you show leadership the honest state of quality across a portfolio; the budget grid is how you
-defend those choices when money is tight. "We accepted this gap on purpose, here's the kill criterion" is
-a career-saving sentence in an incident review — far better than an all-green chart that was never true.
+Engineering flagged five new failure modes for Ascend IQ this quarter. The CPO set a $200,000 quarterly cap for online evals. Fund at most three of its five failure modes at the online eval level. Downgrade the rest to a periodic audit or a code-based check, say what you’ll run instead and why it’s enough, and stay under the cap.
+
+**Coverage levels**
+- **Online eval:** An LLM judge or a reviewer scores live traffic continuously. (Listed cost)
+- **Periodic audit:** People review a sample of answers every week or two. (~10% of online)
+- **Code-based check:** A quick rule check, or a spot-check on every release. (~5% of online)
+
+**Engineering's five failure modes**
+
+| Failure | Trust metric | Risk | Online eval cost | What goes wrong |
+|---|---|---|---|---|
+| Data Fabrication | Hallucination Rate | P0 | $85,000 | Makes up data points, such as a competitor’s price or a review count. |
+| Context Specificity | Robustness | P1 | $70,000 | Answers the question but misses what was asked, such as summarizing all reviews when the client asked for the negative ones. |
+| Overconfident Tone | UX Trust | P1 | $65,000 | States guesses as facts, with no sign of how sure it is. |
+| Data Bias | Fairness | P2 | $55,000 | Favors US data over APAC data when it summarizes. |
+| Slow Answers | Latency | P3 | $25,000 | Long, multi-step questions take more than 10 seconds to answer. |
+
+The cap counts online eval spend only, and at most three failures can be online evals. Funding the P0 and both P1s as online evals costs $220,000, so the learner has to downgrade at least one P0 or P1.
+
+For each failure, the learner picks a level. For each failure below the online eval level, they write the cheaper check they'll run and why it's enough: what it still catches, what it misses, and why they can live with that.
+
+🚦 DECISION at every level, and at every downgrade.
+
+**Before saving, check:**
+- All 5 failure modes have a level.
+- **At most 3** failure modes funded as online evals.
+- Total online eval spend ≤ **$200,000**.
+- For each failure below online eval: the check you’ll run AND why it’s enough.
+- At least one P0 or P1 risk was downgraded, and that downgrade is defensible.
+- You can answer: “Why did you downgrade X instead of Y?”
+
+**Pressure-test prompt** (the learner pastes their markdown under it):
+
+```text
+You are the CPO of Ascend Analytics. I have a strict $200K/quarter cap for online eval coverage (an LLM judge or reviewer scoring live traffic continuously) on the Ascend IQ agent, and 5 failure modes to fund.
+
+Pressure-test my budget:
+
+1. Did I fund the right P0/P1 risks as online evals? Which downgrade exposes us to the most serious risk?
+2. For every periodic audit or code-based check, would that check actually catch the failure, or am I just ticking a box?
+3. If a P0 failure reached a client tomorrow, would my reason hold up in a customer incident review?
+4. Which single eval should I re-prioritize given the trade-off? Be specific about cost.
+
+Be direct. Don't soften.
+```
+
+**If you're working with an assistant instead of the Lab Guide,** have it write the file in exactly this shape, then commit it (or paste it into the file on GitHub):
+
+```markdown
+# Module 5 · Eval Budget · Ascend IQ
+
+**Quarterly budget cap:** $200,000
+**Online eval spend:** $… (… of at most 3 online evals)
+
+## Budget
+
+| Failure | Trust metric | Risk | Level | Cost |
+| --- | --- | :---: | :---: | ---: |
+| … | … | P0 / P1 / P2 / P3 | Online eval / Periodic audit / Code-based check | $… |
+
+## Downgrades
+
+### [level] · [failure] ([metric] · [risk])
+- **Cheaper check:** …
+- **Why it’s enough:** …
+```
+
+✅ CHECKPOINT: every failure has a level, online eval spend is at or under $200,000, and every downgrade names a check and what it misses.
 
 ---
 
-## Done-check (verify before saying "complete")
+## Done-check
 
-- [ ] `lab-1-coverage-matrix.md`: coverage row with **≥2 ❌**, two methods+ground-truth, one accepted gap (with kill criterion), one dated critical mitigation.
-- [ ] `lab-2-budget-crisis.md`: grid within the **$200K cap** and **≤3 L3 slots**, running total, and a defensible fallback for every non-L3 item.
-- [ ] Reasoning is in the learner's words; both files committed and pushed.
+- [ ] Lab 1: `coverage-matrix.md` committed in the shape above, with the learner's own marks and calls.
+- [ ] Lab 2: `eval-budget.md` committed in the shape above, with the learner's own levels and reasons.
 
-**Debrief (post in `#ai-evals-cohort`):** the one ❌ gap you accepted and the kill criterion that would
-force you to close it.
-
-**Next:** Module 6 — Culture: the Ship/Hold memo and your final pitch.
-
-*Product School · AI Evals · M5 Lab (assistant runbook)*
+**Next:** Module 6, Make Evals the Way the Org Ships.
