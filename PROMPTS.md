@@ -55,9 +55,9 @@ Two habits that make this work:
 
 ## M5, Scale
 
-> Walk me through `05-scale/LAB.md`. Force at least 2 ❌ gaps in my coverage matrix, and hold me to the
-> $200K cap with max 3 Level-3 slots in the budget grid. Write `lab-1-coverage-matrix.md` and
-> `lab-2-budget-crisis.md` with a defensible fallback for every non-L3 item.
+> Walk me through `05-scale/LAB.md`. Hold me to marking coverage from what runs today, and to the
+> $200K cap with at most 3 online evals in the budget. Write `coverage-matrix.md` and
+> `eval-budget.md`, with what each cheaper check misses.
 
 ## M6, Culture (capstone)
 
