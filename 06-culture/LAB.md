@@ -1,142 +1,104 @@
 <!--
-LAB SPEC — machine-readable. This is the coding-agent version of the Module 6 lab guides + the
-Ship/Hold Memo Builder and Final Pitch Prompt Generator tools. Same steps, same deliverables, same
-checkpoints — written so a coding harness (Cursor, Claude Code, Codex) OR a chatbot (ChatGPT, Claude,
-Gemini) can walk the learner through the capstone. If you are a human, you can read it top to bottom.
+LAB SPEC for an AI assistant (ChatGPT, Claude, Gemini, or a coding agent such as Claude Code,
+Cursor, or Codex). It walks a learner through the Module 6 lab one step at a time, with the
+same steps as the Module 6 Lab Guide. If you are a human, you can read it top to bottom.
 -->
 
-# M6 Lab — Culture: Ship/Hold Memo + Final Pitch (assistant runbook)  ·  CAPSTONE
+# Module 6 Lab, assistant runbook
 
-**Deliverables:** `06-culture/lab-1-ship-hold-memo.md` · `06-culture/lab-2-final-pitch.html` (generated deck)
-**Builds on:** every prior artifact (M1 strategy → M5 scale) — this is where they come together
-**Time:** ~30 min · **Required:** the memo cites **real numbers from M2–M5**; the recommendation comes **first**
-
----
-
-## AGENT INSTRUCTIONS — read this first
-
-You are helping a learner **assemble their capstone, not write it for them.** The recommendation and the
-numbers are theirs. Follow these rules:
-
-1. **Go one step at a time.** Do not jump ahead or fill later sections.
-2. **At every `🚦 DECISION` gate, STOP and ask the learner.** If the memo buries the recommendation or
-   cites vibes instead of numbers, push back once.
-3. **Never invent their reasoning or their metrics.** Pull numbers from *their* M2–M5 files; if a number
-   is missing, ask — don't fabricate one.
-4. **When a step says `✍️ WRITE`, update the named file** and show the diff.
-5. **At each `✅ CHECKPOINT`, summarise and confirm before continuing.**
-6. **Honesty rule:** if the gates aren't met, the memo says HOLD (or SHIP-with-conditions) — don't
-   let the deck overstate the result.
-
-> **Works with any assistant.** If your assistant can edit files in your repo, have it **write the files
-> and commit**. If it can't (e.g. plain ChatGPT), it **prints each finished block** and you paste it in,
-> then commit. The **Ship/Hold Memo Builder** and **Final Pitch Prompt Generator** from the Module 6
-> resources still work if the learner prefers to click.
-
-Scenario: PM at **Ascend Analytics** deciding whether to ship **Ascend IQ**. Reuse the same case
-throughout — the memo is the culmination of every prior module.
+**Use this if** you ran out of time in class, or want to run the lab again on your own.
+**The lab** produces `06-culture/ship-hold-memo.md`.
 
 ---
 
-## Before you start
+## AGENT INSTRUCTIONS, read this first
 
-Confirm (ask, don't assume):
+You are helping a learner complete this lab, not doing it for them. The call is theirs.
 
-- [ ] Their forked `ai-evals` repo is open in this assistant.
-- [ ] Prior artifacts exist: `01-evaluation-strategy/`, `02-failure-discovery/`, `03-eval-suites/`,
-      `04-eval-gates/`, `05-scale/` — the memo cites numbers from these.
-- [ ] `06-culture/lab-1-ship-hold-memo.md` exists (create from the template shape if not).
+1. Go one step at a time. Do not jump ahead.
+2. At every 🚦 DECISION, stop and ask the learner. Never pick Ship or Hold for them.
+3. Never invent numbers. Every number in the memo must come from the learner's own repo files from Modules 2 to 5. If they have no number for something, they write "not measured yet".
+4. At each ✅ CHECKPOINT, summarise what they have and confirm before moving on.
+5. There is no right answer to ship or hold. What matters is that clear evidence backs up the call.
 
----
-
-## Step 1 — Make the call (Pyramid Principle: answer first)  (~5 min)
-
-🚦 **DECISION — SHIP or HOLD?** Get the recommendation **and** the one-sentence business reason. This is
-the first line of the memo — it does not get buried. Fill the To/From header too.
-
-✍️ **WRITE** → `lab-1-ship-hold-memo.md`: the **Decision** line + **The Answer** (first sentence = the
-recommendation + business reason).
-
-✅ **CHECKPOINT:** the recommendation is unmistakable in the first sentence.
+Scenario: the learner is a PM at Ascend Analytics. Their evals for Ascend IQ are done, and the CPO has to decide whether it ships.
 
 ---
 
-## Step 2 — Three argument pillars  (~6 min)
+## Lab · Write Your Ship-or-Hold Memo (about 15 min)
 
-🚦 **DECISION — the three pillars** that support the call. Each is a titled argument, not a data dump.
-Guide them to distinct angles (e.g. user trust, business risk, eval readiness) — not three versions of
-the same point.
+Write your recommendation to the CPO: ship or hold Ascend IQ, based on the evals you ran in this course. Use the Pyramid Principle: your answer first, then your arguments, then the evidence for each. Your memo becomes the decision in your final project presentation.
 
-✍️ **WRITE** → `lab-1-ship-hold-memo.md` **The Arguments** (1, 2, 3).
+1. **Find your numbers.** Open these files in your repo and note the numbers you’ll use. Only cite what’s in them. If you have no number for something, write “not measured yet.”
+   - Your top failures, how often they happened and their priority: `02-failure-discovery/failure-taxonomy.md`
+   - What your checks caught and missed: `03-eval-suites/eval-suite.md`
+   - Your threshold: `03-eval-suites/eval-spec.md`
+   - Your gates and release criteria: `04-eval-gates/launch-strategy.md`
+   - Your coverage gaps and what you funded: `05-scale/coverage-matrix.md` and `eval-budget.md`
+2. **Make the call.** Pick Ship or Hold, and write one sentence that says your call and the reason for it.
+3. **Give your arguments.** Two or three main points that support your call without overlapping, such as adoption, brand or legal risk. Under each one, add the number from step 01 that proves it.
+4. **Ask for a decision.** Say what you need the CPO to approve, and by when.
+5. **Pressure-test and save.** Copy this prompt into any LLM. It already includes your memo. Change anything the feedback convinces you on, and keep every number from your repo. Then click **Copy markdown**, open `06-culture/ship-hold-memo.md` in your repo, click the pencil icon, paste over the file, and commit. Or click **Download .md** and upload it to the same folder. Your memo becomes part of your final project. The Final Project Deliverables Builder pulls it from your repo.
 
-✅ **CHECKPOINT:** three distinct, titled pillars, each a clear claim.
+🚦 DECISION at step 2 (Ship or Hold, and the answer) and step 3 (each main point, and the number that proves it).
+
+**The example from the slide** (answer first, each argument has a number, it ends with a decision):
+
+> Hi [Manager],
+> I recommend we spend next sprint on AI reliability, to protect our enterprise renewals.
+> 1. Reliability gaps are costing enterprise trust: robustness evals fail on 12% of edge cases.
+> 2. Accuracy issues put key accounts at risk: three enterprise clients flagged made-up insights.
+> 3. Competitors are winning on dependability.
+> Please approve the sprint plan by Friday.
+
+**Pressure-test prompt** (the learner pastes their memo under it):
+
+```text
+Review this ship-or-hold memo for an AI product, as a skeptical CPO.
+
+1) Is the recommendation the first sentence, and is it clear what I want you to decide?
+2) Does each argument make one main point, and do the arguments overlap?
+3) Does every argument have a specific number behind it? Point out any argument that relies on a vague claim, and any number that doesn't prove the point it sits under.
+4) Does it end with a specific decision and a date?
+Suggest changes, but do not add or change any numbers. Keep the reply under 250 words.
+```
+
+**If you're working with an assistant instead of the Lab Guide,** have it write the file in exactly this shape, then commit it (or paste it into the file on GitHub):
+
+```markdown
+# Ship-or-Hold Memo · Ascend IQ
+
+> **Decision:** SHIP or HOLD
+
+## The Answer
+
+[Your call and the reason for it, in one sentence]
+
+## The Arguments
+
+### 1. [Main point]
+
+Evidence: [the number from your repo that proves it]
+
+### 2. [Main point]
+
+Evidence: [the number from your repo that proves it]
+
+### 3. [Main point, optional]
+
+Evidence: [the number from your repo that proves it]
+
+## Next Step · Decision Needed
+
+[What you need the CPO to approve, and by when]
+```
+
+✅ CHECKPOINT: the answer comes first, two or three main points each have a number from the learner's repo, and the memo ends with a decision and a date.
 
 ---
 
-## Step 3 — Evidence from real numbers  (~6 min)
+## Done-check
 
-🚦 **DECISION — the evidence block.** Pull **exact numbers from M2–M5**: hallucination rate vs its gate,
-factual-grounding %, bias coverage %, p95 latency, etc. Each line: `Metric: result (Gate: bar)
-PASS/FAIL · Source`. If a number is missing, ask the learner to fetch it from the relevant file — do not
-invent it.
+- [ ] `ship-hold-memo.md` committed in the shape above, with the learner's own call and numbers.
 
-✍️ **WRITE** → `lab-1-ship-hold-memo.md` **Evidence · Trust Metrics**.
-
-✅ **CHECKPOINT:** every claim in Step 2 is backed by a cited number with a PASS/FAIL against its gate.
-
----
-
-## Step 4 — Business risk, the ask, and the reflection  (~5 min)
-
-1. 🚦 **DECISION — business risk.** Quantify the SHIP-path vs HOLD-path risk (revenue, churn,
-   competitive window).
-2. 🚦 **DECISION — next step / decision needed.** A specific request **with a deadline** (e.g. "Approve
-   the Hold rollback by Friday to keep the Q3 window.").
-3. ✍️ **WRITE** → the **Reflection**: what defining "good enough" forced them to confront.
-
-✍️ **WRITE** → `lab-1-ship-hold-memo.md` **Business Risk**, **Next Step**, **Reflection**. Commit.
-
-✅ **CHECKPOINT:** the memo is a complete, exec-ready decision doc citing real numbers.
-
----
-
-## Step 5 — Generate the final pitch deck + submit  (~8 min)
-
-1. Open the **Final Pitch Prompt Generator** (ships with the course) — or ask this assistant to
-   assemble the deck from your repo files. Feed it: the Strategy Canvas (M1), failure taxonomy (M2),
-   eval suite results (M3), gate/launch strategy (M4), coverage + budget (M5), and the Ship/Hold memo.
-2. Produce the shareable **`06-culture/lab-2-final-pitch.html`** deck. (A tool like Gamma also works —
-   the repo file is the submission of record.)
-3. **Stranger-test (optional but recommended):** paste the deck's content + a skeptical-exec review
-   prompt into ChatGPT / Claude / Gemini; fix anything generic or unsupported before submitting.
-4. ▶️ **Commit + push** the memo and the generated deck.
-
-✅ **DONE when:** the memo is complete and cites real numbers, the pitch deck is generated, and both are
-committed and pushed.
-
----
-
-## 💼 In practice
-
-The Ship/Hold memo *is* the job. Everything in the course — the strategy canvas, the failure taxonomy,
-the eval suite, the gates — exists to let you write these five paragraphs with a straight face: here's
-the call, here's why, here are the numbers, here's the risk, here's what I need from you. PMs who can put
-the recommendation in the first sentence and back it with gate-referenced evidence are the ones execs
-trust with the next launch decision. The deck is how you get the room aligned in ten minutes.
-
----
-
-## Done-check (verify before saying "complete")
-
-- [ ] `lab-1-ship-hold-memo.md`: recommendation in the **first sentence**, 3 distinct pillars, an
-      evidence block with **real M2–M5 numbers** (result vs gate, PASS/FAIL, source), quantified
-      business risk, a dated decision request, and a reflection.
-- [ ] `lab-2-final-pitch.html` is generated from the repo artifacts and is honest about the gates.
-- [ ] Reasoning + numbers are the learner's (nothing fabricated); both files committed and pushed.
-
-**Debrief (post in `#ai-evals-cohort`):** your SHIP/HOLD call in one line + the single number that
-decided it.
-
-**Submit** your repo URL (and the deck) to the learning platform within 7 days of your cohort ending.
-
-*Product School · AI Evals · M6 Capstone Lab (assistant runbook)*
+**Next:** open the Final Project Deliverables Builder, paste your repo link, and build your final presentation.
