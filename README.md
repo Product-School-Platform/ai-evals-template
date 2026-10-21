@@ -21,8 +21,7 @@ This is a **template repo**. Click **Use this template → Create a new reposito
 | M4 | **Launch strategy** (release criteria + mitigation) | ☐ | `04-eval-gates/launch-strategy.md` |
 | M5 | **Coverage matrix** | ☐ | `05-scale/coverage-matrix.md` |
 | M5 | **Eval budget** | ☐ | `05-scale/eval-budget.md` |
-| M6 | **Ship / Hold memo** | ☐ | `06-culture/lab-1-ship-hold-memo.md` |
-| M6 | **Final pitch deck** (generated HTML) | ☐ | `06-culture/lab-2-final-pitch.html` |
+| M6 | **Ship-or-hold memo** | ☐ | `06-culture/ship-hold-memo.md` |
 
 ## The feature in one sentence
 
@@ -45,7 +44,7 @@ each deliverable file for you to commit.
 | M3 | `03-eval-suites/LAB.md` | eval suite + eval spec |
 | M4 | `04-eval-gates/LAB.md` | gate map + launch strategy |
 | M5 | `05-scale/LAB.md` | coverage matrix + eval budget |
-| M6 | `06-culture/LAB.md` | ship/hold memo + final pitch |
+| M6 | `06-culture/LAB.md` | ship-or-hold memo |
 
 A good opener: *"Open `05-scale/LAB.md` in this repo and walk me through it one step at a time. Stop and
 ask me at every decision."* If your assistant can't read files (plain ChatGPT), paste the `LAB.md`
@@ -62,7 +61,7 @@ See [`PROMPTS.md`](PROMPTS.md) for the quick-reference prompts.
 
 ## How to submit
 
-- Turn the deliverable files into your final pitch (use the M6 Final Pitch tool, or a tool like Gamma).
+- Turn the deliverable files into your final presentation with the Final Project Deliverables Builder.
 - Post your repo URL in `#ai-evals-cohort` and upload to the learning-platform portal within 7 days of your cohort ending.
 
 ## Repo structure
@@ -86,6 +85,5 @@ ai-evals/
 │   ├── coverage-matrix.md            coverage across product lines
 │   └── eval-budget.md                eval budget + trade-offs
 └── 06-culture/                       ← Module 6
-    ├── lab-1-ship-hold-memo.md       ship/hold recommendation
-    └── lab-2-final-pitch.html        generated pitch deck
+    └── ship-hold-memo.md             ship-or-hold recommendation
 ```

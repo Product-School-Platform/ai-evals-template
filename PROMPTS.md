@@ -61,9 +61,9 @@ Two habits that make this work:
 
 ## M6, Culture (capstone)
 
-> Walk me through `06-culture/LAB.md`. Help me write the Ship/Hold memo with the recommendation in the
-> first sentence and real numbers from M2–M5, then assemble the final pitch deck from my repo. Be honest
-> about any gate that isn't met.
+> Walk me through `06-culture/LAB.md`. Help me write the ship-or-hold memo answer first, with each main
+> point backed by a number from my own M2–M5 files, and end with a clear ask. Don't invent numbers, and be
+> honest about any gate that isn't met.
 
 ---
 

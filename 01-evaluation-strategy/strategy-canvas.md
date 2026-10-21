@@ -1,7 +1,7 @@
 # AI Evaluation Strategy Canvas
 
 > Repo file `ai-evals/01-evaluation-strategy/strategy-canvas.md` (the repo is your submission).
-> Becomes the **Strategy Canvas** slide of the final pitch deck you assemble in Module 6.
+> Feeds the **Evaluation strategy** card of the final presentation you build in Module 6.
 >
 > Fill this with the **AI Evaluation Strategy Canvas** tool, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
 
