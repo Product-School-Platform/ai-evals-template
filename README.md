@@ -31,33 +31,20 @@ _What LLM feature are you evaluating, who relies on it, and what is the cost of 
 
 ## Per-module loop
 
-**The guided way (recommended): paste the module's `LAB.md` into your AI assistant.**
-Each module folder ships a **`LAB.md`** runbook written *for your assistant* (ChatGPT, Claude,
-Gemini, Cursor, Claude Code, Codex). Paste it in and it walks you through the module's labs one step
-at a time, asking your decisions, telling you exactly what to run, and writing
-each deliverable file for you to commit.
+Each module's Lab Guide walks you through its labs step by step, with the prompts you paste into any chat. Open it from the Resources slide in the module's deck.
 
-| Module | Paste this into your assistant | Writes |
-|---|---|---|
-| M1 | `01-evaluation-strategy/LAB.md` | strategy canvas |
-| M2 | `02-failure-discovery/LAB.md` | audit log + failure taxonomy |
-| M3 | `03-eval-suites/LAB.md` | eval suite + eval spec |
-| M4 | `04-eval-gates/LAB.md` | gate map + launch strategy |
-| M5 | `05-scale/LAB.md` | coverage matrix + eval budget |
-| M6 | `06-culture/LAB.md` | ship-or-hold memo |
+1. Work through the Lab Guide's steps.
+2. At the end of each lab, click **Copy markdown**.
+3. Paste it over the matching file below, and commit.
 
-A good opener: *"Open `05-scale/LAB.md` in this repo and walk me through it one step at a time. Stop and
-ask me at every decision."* If your assistant can't read files (plain ChatGPT), paste the `LAB.md`
-contents directly.
-
-**The click-through way (still supported).** Prefer the interactive tools?
-1. Open the module's tool from the deck (e.g., the Evaluation Strategy Canvas).
-2. Build your artifact. Click **Copy as markdown**.
-3. Paste into the matching file (e.g., `01-evaluation-strategy/strategy-canvas.md`).
-4. Run the tool's self-review checklist + the AI-review prompt.
-5. Commit. Push. Move on.
-
-See [`PROMPTS.md`](PROMPTS.md) for the quick-reference prompts.
+| Module | Save to |
+|---|---|
+| M1 | `01-evaluation-strategy/strategy-canvas.md` |
+| M2 | `02-failure-discovery/audit-log.md` and `failure-taxonomy.md` |
+| M3 | `03-eval-suites/eval-suite.md` and `eval-spec.md` |
+| M4 | `04-eval-gates/gate-map.md` and `launch-strategy.md` |
+| M5 | `05-scale/coverage-matrix.md` and `eval-budget.md` |
+| M6 | `06-culture/ship-hold-memo.md` |
 
 ## How to submit
 
